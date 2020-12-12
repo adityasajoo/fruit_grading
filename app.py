@@ -13,8 +13,7 @@ app.secret_key = os.environ.get("FN_FLASK_SECRET_KEY", default=False)
 
 #routes
 @app.route('/')
-def index(msg=""):   
-    print(msg)
+def index():  
     if auth.isLoggedIn():       
          return flask.render_template('index.html')
 
